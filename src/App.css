@@ -1,0 +1,16 @@
+.t-element {
+    height: 5rem;
+    width: 5rem;
+    background-color: red;
+}
+
+.nav-link {
+    opacity: .5;
+}
+
+.nav-link:hover > .nav-line {
+    width: 40px;
+    transition: .3s ease-in-out;
+}
+
+
