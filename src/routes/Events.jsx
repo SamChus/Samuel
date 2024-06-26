@@ -37,29 +37,26 @@ const Events = ({
                 Hello, I am Samuel Chukwuma
               </p>
               {userTheme === "dark" ? (
-                <p className="item mt-4 font-normal mb-6 text-dim-body md:text-[16px]  text-[14px]">
-                  A <span className="highlight">Software developer</span> with a
-                  passion for
-                  <span className="highlight "> design</span>. When I'm not
-                  coding, you'll find me shaking up the scene in southeastern
-                  Nigeria,{" "}
-                  <span className="highlight ">
-                    making tech more accessible
-                  </span>{" "}
-                  one event at a time.
+                <p className="item mt-2 font-normal mb-6 text-dim-body md:text-[16px]  text-[14px]">
+                  I am a{" "}
+                  <span className="highlight ">Frontend software engineer</span>{" "}
+                  with equal love for <span className="highlight">design</span>.
+                  I like to describe myself as an{" "}
+                  <span className="highlight">explorer</span>, eager to learn
+                  something new. I build interactive web experiences using
+                  modern web technology and{" "}
+                  <span className="highlight">enjoy sharing</span> what I know.
                 </p>
               ) : (
-                <p className="item mt-4 font-normal mb-6 text-dim-body md:text-[16px]  text-[14px]">
-                  A{" "}
-                  <span className="darker font-medium">Software developer</span>{" "}
-                  with a passion for
-                  <span className="darker font-medium"> design</span>. When I'm
-                  not coding, you'll find me shaking up the scene in
-                  southeastern Nigeria,{" "}
-                  <span className="darker font-medium">
-                    making tech more accessible
-                  </span>{" "}
-                  one event at a time.
+                <p className="item mt-2 font-normal mb-6 text-dim-body md:text-[16px]  text-[14px]">
+                  I am a{" "}
+                  <span className="highlight ">Frontend software engineer</span>{" "}
+                  with equal love for <span className="highlight">design</span>.
+                  I like to describe myself as an{" "}
+                  <span className="highlight">explorer</span>, eager to learn
+                  something new. I build interactive web experiences using
+                  modern web technology and{" "}
+                  <span className="highlight">enjoy sharing</span> what I know.
                 </p>
               )}
             </div>
