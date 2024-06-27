@@ -18,10 +18,8 @@ const base = new Airtable({
   apiKey: process.env.REACT_APP_AIRTABLE_API_KEY,
 }).base(process.env.REACT_APP_AIRTABLE_BASE);
 
-
 function App() {
   const [projects, setProjects] = useState([]);
-  const [talks, setTalks] = useState([]);
   const [userTheme, setUserTheme] = useState([]);
 
   const app = useRef();
@@ -30,7 +28,9 @@ function App() {
 
   // let iconItem = useRef(null);
 
-  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  //  const systemTheme = window.matchMedia(
+  //    "(prefers-color-scheme:dark)"
+  //  ).matches;
 
   const themeSwitch = () => {
     gsap.from(q(".theme"), { rotation: "+=360", ease: "elastic" });
@@ -209,20 +209,6 @@ function App() {
       });
   };
 
-  // AIRTABLE SET UP AND INTEGRATION BEGINS
-  const config = {
-    base: process.env.REACT_APP_AIRTABLE_BASE,
-    projectsTable: "Projects",
-    talksTable: "Talks",
-    view: "Main%20View",
-    apiKey: process.env.REACT_APP_AIRTABLE_API_KEY,
-    maxRecords: 3,
-  };
-
-  const customHeaders = {
-    Authorization: `Bearer ${config.apiKey}`,
-  };
-
   useEffect(() => {
     function fetchData() {
       try {
@@ -234,32 +220,19 @@ function App() {
             fetchNextPage();
           });
       } catch (e) {
-        console.log(e);
+        console.log("We got trouble loading the projects");
       }
 
-      // try {
-      //   base("Talks")
-      //     .select({ view: "Grid view" })
-      //     .eachPage((records, fetchNextPage) => {
-      //       setTalks(records);
-      //       fetchNextPage();
-      //     });
-      // } catch (e) {
-      //   console.log(e);
-      // }
+  
     }
 
     fetchData();
   }, []);
 
-  // AIRTABLE SET UP AND INTEGRATION ENDS
-
   useState(() => {
-    if (systemTheme) {
-      document.documentElement.classList.add("dark");
-      setUserTheme("dark");
-    }
-  }, [systemTheme]);
+    document.documentElement.classList.add("dark");
+    setUserTheme("dark");
+  }, []);
 
   useEffect(() => {
     t1.current = gsap
@@ -295,24 +268,20 @@ function App() {
         },
         "one"
       )
-      .fromTo(
-        q(".highlight"),
-        { color: "#777778" },
-        {
-          delay: 1,
-          color: "#fff",
-          repeat: 2,
-          yoyo: true,
-          duration: 0.5,
-          ease: "rough",
-        },
-        "one"
-      );
+      // .fromTo(
+      //   q(".highlight"),
+      //   { color: "#777778" },
+      //   {
+      //     delay: 1,
+      //     color: "#fff",
+      //     repeat: 3,
+      //     yoyo: true,
+      //     duration: 0.5,
+      //     ease: "rough",
+      //   },
+      //   "one"
+      // );
   }, [userTheme]);
-
-  // useEffect(() => {
-
-  // }, [userTheme]);
 
   return (
     <div ref={app} className="App dark:bg-dim min-h-screen">
@@ -423,7 +392,6 @@ function App() {
               <Events
                 history={props.history}
                 projects={projects}
-                talks={talks}
                 userTheme={userTheme}
                 onActivityEnter={onActivityEnter}
                 onActivityLeave={onActivityLeave}

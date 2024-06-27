@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef } from "react";
+import React from "react";
 import Button from "../components/Button.jsx";
 import profile from "../images/sam-shaped.png";
 // import profile from "../images/sam.jpeg";
@@ -18,29 +18,37 @@ const HomeBoi = ({ userTheme }) => {
         </p>
 
         {userTheme === "dark" ? (
-          <p className="item mt-2 font-normal mb-6 text-dim-body md:text-[16px]  text-[14px]">
-            A <span className="highlight ">software engineer</span> with equal
-            love for{" "}
-            <span className="highlight">
-              design and solving problems using frontend technology.
-            </span> I like to describe myself as an{" "}
-            <span className="highlight">explorer</span>, eager to learn
-            something new. I build interactive web experiences using modern web
-            technology and <span className="highlight">enjoy sharing</span> what
-            I know.
-          </p>
+          <div className="description">
+            <p className="item mt-2 font-normal mb-6 text-dim-body md:text-[16px]  text-[14px]">
+              A <span className="highlight two">software engineer</span> with
+              equal love for{" "}
+              <span className="highlight">
+                design and solving problems using frontend technology.
+              </span>{" "}
+              I like to describe myself as an{" "}
+              <span className="highlight">explorer</span>, eager to learn{" "}
+              <span className="highlight">something new</span>. I build{" "}
+              <span className="highlight"> interactive web</span> experiences
+              using modern web technology and{" "}
+              <span className="highlight ">enjoy sharing</span> what I know.
+            </p>
+          </div>
         ) : (
-          <p className="item mt-2 font-normal mb-6 text-dim-body md:text-[16px]  text-[14px]">
-            A <span className="highlight ">software engineer</span> with equal
-            love for{" "}
-            <span className="highlight">
-              design and solving problems using frontend technology.
-            </span> I like to describe myself as an{" "}
-            <span className="highlight">explorer</span>, eager to learn
-            something new. I build interactive web experiences using modern web
-            technology and <span className="highlight">enjoy sharing</span> what
-            I know.
-          </p>
+          <div className="description-dark">
+            <p className="item mt-2 font-normal mb-6 text-dim-body md:text-[16px]  text-[14px]">
+              A <span className="highlight two">software engineer</span> with
+              equal love for{" "}
+              <span className="highlight">
+                design and solving problems using frontend technology.
+              </span>{" "}
+              I like to describe myself as an{" "}
+              <span className="highlight">explorer</span>, eager to learn{" "}
+              <span className="highlight">something new</span>. I build{" "}
+              <span className="highlight">interactive web</span> experiences
+              using modern web technology and{" "}
+              <span className="highlight ">enjoy sharing</span> what I know.
+            </p>
+          </div>
         )}
       </div>
 

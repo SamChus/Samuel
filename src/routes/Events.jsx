@@ -1,6 +1,4 @@
 import React from "react";
-import ActivitiesContainer from "../components/ActivitiesContainer";
-import TalkContainer from "../components/TalkContainer";
 import profile from "../images/sam.jpeg";
 import github from "../images/icons/Github.svg";
 import twitter from "../images/icons/Twitter.svg";
@@ -22,9 +20,9 @@ const Events = ({
   onTalkEnter,
   onTalkLeave,
 }) => {
-  const articles = projects.filter(
-    (project) => project.fields.Type === "Article"
-  );
+  // const articles = projects.filter(
+  //   (project) => project.fields.Type === "Article"
+  // );
 
   return (
     <>
@@ -37,29 +35,39 @@ const Events = ({
                 Hello, I am Samuel Chukwuma
               </p>
               {userTheme === "dark" ? (
-                <p className="item mt-2 font-normal mb-6 text-dim-body md:text-[16px]  text-[14px]">
-                  A <span className="highlight ">software engineer</span> with
-                  equal love for{" "}
-                  <span className="highlight">
-                    design and solving problems using frontend technology.
-                  </span> I like to describe myself as an{" "}
-                  <span className="highlight">explorer</span>, eager to learn
-                  something new. I build interactive web experiences using
-                  modern web technology and{" "}
-                  <span className="highlight">enjoy sharing</span> what I know.
-                </p>
+                <div className="description">
+                  <p className="item mt-2 font-normal mb-6 text-dim-body md:text-[16px]  text-[14px]">
+                    A <span className="highlight two">software engineer</span>{" "}
+                    with equal love for{" "}
+                    <span className="highlight">
+                      design and solving problems using frontend technology.
+                    </span>{" "}
+                    I like to describe myself as an{" "}
+                    <span className="highlight">explorer</span>, eager to learn{" "}
+                    <span className="highlight">something new</span>. I build{" "}
+                    <span className="highlight">interactive web</span>{" "}
+                    experiences using modern web technology and{" "}
+                    <span className="highlight ">enjoy sharing</span> what I
+                    know.
+                  </p>
+                </div>
               ) : (
-                <p className="item mt-2 font-normal mb-6 text-dim-body md:text-[16px]  text-[14px]">
-                  A <span className="highlight ">software engineer</span> with
-                  equal love for{" "}
-                  <span className="highlight">
-                    design and solving problems using frontend technology.
-                  </span> I like to describe myself as an{" "}
-                  <span className="highlight">explorer</span>, eager to learn
-                  something new. I build interactive web experiences using
-                  modern web technology and{" "}
-                  <span className="highlight">enjoy sharing</span> what I know.
-                </p>
+                <div className="description-dark">
+                  <p className="item mt-2 font-normal mb-6 text-dim-body md:text-[16px]  text-[14px]">
+                    A <span className="highlight two">software engineer</span>{" "}
+                    with equal love for{" "}
+                    <span className="highlight">
+                      design and solving problems using frontend technology.
+                    </span>{" "}
+                    I like to describe myself as an{" "}
+                    <span className="highlight">explorer</span>, eager to learn{" "}
+                    <span className="highlight">something new</span>. I build{" "}
+                    <span className="highlight">interactive web</span>{" "}
+                    experiences using modern web technology and{" "}
+                    <span className="highlight ">enjoy sharing</span> what I
+                    know.
+                  </p>
+                </div>
               )}
             </div>
             {/* top block, middle flang */}
