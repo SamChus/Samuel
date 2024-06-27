@@ -289,7 +289,7 @@ function App() {
         <nav className="flex justify-between items-center px-4 md:px-8 py-4 lg:hidden">
           <Link
             to="/"
-            className="font-extrabold text-xl ml-3 text-dark dark:text-imagination"
+            className="font-extrabold text-2xl ml-3 text-dark dark:text-imagination"
           >
             Samuel.
           </Link>{" "}
